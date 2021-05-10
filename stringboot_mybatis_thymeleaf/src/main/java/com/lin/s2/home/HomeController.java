@@ -9,6 +9,6 @@ public class HomeController {
 	@GetMapping("/")
 	public String home(Model model) {
 		//model.addAttribute("message", "Thymeleaf Project");
-		return "index";
+		return "index"; // templates/index.html로 온다
 	}
 }
