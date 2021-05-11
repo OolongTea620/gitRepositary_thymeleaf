@@ -1,0 +1,25 @@
+<!-- 타임리프 사용시 1. 라이블러리 필요 -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!-- thymeleaf 사용시 반드시 넣어줘야 한다 문서 참고 -->
+<head th:fragment="head(title)">
+<meta charset="UTF-8">
+<title th:text="${title}">Hello, world</title>
+<link rel="stylesheet" th:href="@{/css/test.css}" href="*">
+</head>
+<body>
+	<nav>
+	</nav>
+	<!-- jumbo tron 밑에 -->
+	<!-- 어느 html에 있는 파일명만 작성 ==>  = 경로+파일 이름 :: fragment id  작성하기-->
+	
+	<div class="insert" th:insert="./fragments/frag :: copy"></div> <!-- 사용하는 테그 안에 section이 들어감 -->
+	<div class="replace" th:replace="./fragments/frag :: copy"></div> <!-- div를 section 태그로 덮어 씌워짐  -->
+	<div class="include" th:include="./fragments/frag :: copy"></div> <!-- id 내부에 있는 것들만 꺼내오는 것 -->
+	
+	<footer th:fragment="copy3">
+		<h3>This is footer Area</h3>
+	</footer>
+
+
+</body>
+</html>
