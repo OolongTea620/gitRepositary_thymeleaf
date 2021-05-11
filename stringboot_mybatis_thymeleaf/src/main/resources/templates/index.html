@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"> <!-- thymeleaf 사용시 반드시 넣어줘야 한다 -->
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" th:href="@{/css/test.css}" href="*">
+<title>Home</title>
 </head>
 <body>
-	<h1 class="" th:class="c1" >ThymeLeaf Index Page</h1>
-	<h1 th:text="${message}">Defalt Message</h1>
-	<img src="" th:src="@{/images/iu1.jpeg}">
-	<img alt="" th:src="@{./images/iu2.jpeg}" src="">
+<h1>Index Page</h1>
+<!-- header template bootstrap도 가져올 수 있음 -->
+<!-- <div th:replace=""></div> -->
+<footer th:replace="./fragments/default :: copy3">
+</footer>
+
 </body>
 </html>
