@@ -8,7 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/member/**")
 public class MemberController {
 	
-	@GetMapping("MemberJoin")
+	@GetMapping("login")
+	public String getLogin() throws Exception{
+		return"member/memberLogin";
+	}
+	
+	@GetMapping("join")
 	public String setJoin()throws Exception{
 		return "member/memberJoin";
 	}
