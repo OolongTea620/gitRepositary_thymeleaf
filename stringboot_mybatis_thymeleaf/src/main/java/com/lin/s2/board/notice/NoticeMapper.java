@@ -1,9 +1,11 @@
 package com.lin.s2.board.notice;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 import com.lin.s2.board.BoardMapper;
 
+//@Repository
 @Mapper
 public interface NoticeMapper extends BoardMapper{
 	//getList()패키지 명은 동일하게 맞춰준다

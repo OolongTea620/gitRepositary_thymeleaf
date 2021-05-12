@@ -1,5 +1,7 @@
 package com.lin.s2.board.notice;
 
-public class NoticeVO {
+import com.lin.s2.board.BoardVO;
 
+public class NoticeVO extends BoardVO{
+	
 }
