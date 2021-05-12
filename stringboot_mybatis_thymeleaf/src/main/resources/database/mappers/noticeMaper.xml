@@ -5,10 +5,10 @@
 <mapper namespace="com.lin.s2.board.notice.NoticeMapper">
 <!--DAO 대신 Mapper로 동일하게 맞춰준다 -->
 	<select id="getList" resultType="NoticeVO">
-		select * from
-		(select rowNum R, N.* from
-		(select * from notice order by num desc) N )
-		where R between 1 and 10
+		select * from notice order by regDate desc 
+	</select>
+	<select id="getSelect" parameterType="noticeVO">
+		
 	</select>
 	
 	
