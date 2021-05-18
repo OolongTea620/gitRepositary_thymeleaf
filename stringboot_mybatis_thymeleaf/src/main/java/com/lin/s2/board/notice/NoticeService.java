@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.lin.s2.board.BoardService;
 import com.lin.s2.board.BoardVO;
@@ -31,8 +32,17 @@ public class NoticeService implements BoardService {
 	}
 
 	@Override
-	public int setInsert(BoardVO boardVO) throws Exception {
+	public int setInsert(BoardVO boardVO, MultipartFile[] files) throws Exception {
 		// TODO Auto-generated method stub
+		String filePath = "upload/notice/";
+		
+		for(MultipartFile multipartFile : files) {
+			if(multipartFile.getSize() == 0) {
+				continue;
+			}
+		}
+		String fileName=" ";
+		
 		return noticeMapper.setInsert(boardVO);
 	}
 

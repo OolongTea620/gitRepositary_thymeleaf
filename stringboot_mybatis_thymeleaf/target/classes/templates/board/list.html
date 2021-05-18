@@ -59,7 +59,8 @@
 	
 	<div class="container d-flex justify-content-center">
 		  <ul class="pagination">
-		  
+		  	<!-- 7.conditional Evaluation 조건식 -->
+		  	<li th:if="${pager.pre}" class="page-item"><a class="page-link" href="#">Previous</a></li>
 		    <li class="page-item" th:each="i : ${#numbers.sequence(pager.startNum, pager.lastNum)}"><a class="page-link" th:text="${i}" th:href="@{./list(curPage=${i})}">Previous</a></li>
 		  </ul>
 	</div>
