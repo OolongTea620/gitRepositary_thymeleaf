@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:include="/fragments/default :: head('Board Select')">
+<!-- defaut의 head(변수명 가져옴 #8.2)  -->
 <meta charset="UTF-8">
 <title>Home</title>
 </head>
 <body>
 <div th:replace="/fragments/default :: header"></div>
-
+<!-- th:replace="경로" :: 표식이름  -->
 <div th:replace="/fragments/default :: jumbo"></div>
+
 <div class="container">
 	<h2 th:text="${vo.title}"></h2>
 	<h2 th:text="${vo.contents}"></h2>
 </div>
 
 <footer th:replace="/fragments/default :: footer"></footer>
-
 </body>
 </html>

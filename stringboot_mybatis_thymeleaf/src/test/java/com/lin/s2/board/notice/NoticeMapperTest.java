@@ -27,21 +27,20 @@ public class NoticeMapperTest {
 			boardVO.setWriter("writer"+i);
 			noticeMapper.setInsert(boardVO);
 		}
-		System.out.println("Finish");
+		System.out.println("Insert 완료");
 	}
 	
 	@Test
 	void getListTest( Pager pager ) throws Exception {
 
 		List<BoardVO> ar = noticeMapper.getList(pager);
-		
 
 		for(BoardVO boardVO:ar) {
+			//향상된 For문 
 			System.out.println(boardVO.toString());
 		}
 
 		System.out.println(ar.size());
-		assertNotEquals(0, ar.size());
-
+		assertNotEquals(0, ar.size()); // 10개 가지고 오고 싶은데 0이 아니였으면 좋겠다	
 	}
 }

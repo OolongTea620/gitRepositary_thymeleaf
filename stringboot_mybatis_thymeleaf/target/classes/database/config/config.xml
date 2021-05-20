@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- namespace를 적어준다 -->
+<!-- VO라는 객체를 저장하는 용도 이름은 config로 설정하자-->
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
@@ -8,7 +9,6 @@
  	<typeAliases>
  		<typeAlias type="com.lin.s2.board.BoardVO" alias="BoardVO"/>
  		<typeAlias type="com.lin.s2.board.notice.NoticeVO" alias="NoticeVO"/>
-
   		<typeAlias type="com.lin.s2.util.Pager" alias="Pager"/>
 	</typeAliases>
 </configuration>

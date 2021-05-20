@@ -16,7 +16,9 @@ import com.lin.s2.util.Pager;
 
 @Controller
 @RequestMapping("/notice/**")
+
 public class NoticeController {
+	
 	@Autowired
 	private NoticeService noticeService;
 
@@ -28,8 +30,10 @@ public class NoticeController {
 	@GetMapping("list")
 	public String getList(Model model, Pager pager)throws Exception{
 		List<BoardVO> ar = noticeService.getList(pager);
+		
 		model.addAttribute("list", ar);
 		model.addAttribute("pager",pager);
+		
 		return "board/list";
 	}
 	

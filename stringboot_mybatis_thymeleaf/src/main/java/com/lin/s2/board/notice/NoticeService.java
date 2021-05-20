@@ -16,34 +16,23 @@ public class NoticeService implements BoardService {
 	@Autowired
 	private NoticeMapper noticeMapper;
 	
+	//
 	@Override
 	public List<BoardVO> getList(Pager pager) throws Exception {
 		// TODO Auto-generated method stub
-		pager.makeRow();
-		Long totalCount = noticeMapper.getTotalCount(pager);
-		pager.makeNum(totalCount);
-		return noticeMapper.getList(pager);
+		return null;
 	}
-
+	//인터페이스 구현 오버라이드 
 	@Override
 	public BoardVO getSelect(BoardVO boardVO) throws Exception {
-		// TODO Auto-generated method stub
-		return noticeMapper.getSelect(boardVO);
+		
+		return noticeMapper.getList(boardVO);
 	}
 
 	@Override
-	public int setInsert(BoardVO boardVO, MultipartFile[] files) throws Exception {
-		// TODO Auto-generated method stub
-		String filePath = "upload/notice/";
+	public int setInsert(BoardVO boardVO) throws Exception {
 		
-		for(MultipartFile multipartFile : files) {
-			if(multipartFile.getSize() == 0) {
-				continue;
-			}
-		}
-		String fileName=" ";
-		
-		return noticeMapper.setInsert(boardVO);
+		return 0;
 	}
 
 	@Override
@@ -57,5 +46,9 @@ public class NoticeService implements BoardService {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	
+
+	
 	
 }
